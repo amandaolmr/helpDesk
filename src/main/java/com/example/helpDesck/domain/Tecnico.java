@@ -27,4 +27,9 @@ public class Tecnico extends Pessoa {
 		super();
 		addPerfil(Perfil.TECNICO);
 	}
+
+	public Tecnico(Integer id, String nome, String cpf, String email, String senha) {
+		super(id, nome, cpf, email, senha);
+		addPerfil(Perfil.CLIENTE);
+	}
 }

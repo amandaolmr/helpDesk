@@ -48,6 +48,15 @@ public abstract class Pessoa implements Serializable {
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	protected LocalDate dataCriacao = LocalDate.now();
 
+	public Pessoa(Integer id, String nome, String cpf, String email, String senha) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.cpf = cpf;
+		this.email = email;
+		this.senha = senha;
+		addPerfil(Perfil.CLIENTE);
+	}
 
 	public void addPerfil(Perfil perfil) {
 		this.perfis.add(perfil.getCodigo());
